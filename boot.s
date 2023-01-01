@@ -1,7 +1,6 @@
 # set magic number to 0x1BADB002 to identified by bootloader 
 .set MAGIC,    0x1BADB002
 
-# set flags to 0
 .set FLAGS,    0
 
 # set the checksum
@@ -10,7 +9,7 @@
 # set multiboot enabled
 .section .multiboot
 
-# define type to long for each data defined as above
+# define type to long
 .long MAGIC
 .long FLAGS
 .long CHECKSUM
@@ -19,11 +18,10 @@
 # set the stack bottom 
 stackBottom:
 
-# define the maximum size of stack to 512 bytes
+# define the MAX stack size 
 .skip 1024
 
 
-# set the stack top which grows from higher to lower
 stackTop:
 
 .section .text
@@ -42,7 +40,7 @@ _start:
 	cli
 
 
-# put system in infinite loop
+# system infinite loop
 hltLoop:
 
 	hlt
