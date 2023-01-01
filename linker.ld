@@ -3,7 +3,7 @@ ENTRY(_start)
 
 SECTIONS
 {
-	/* we need 1MB of space atleast */
+	/* 1MB of space */
 	. = 1M;
 
   	/* text section */
@@ -13,19 +13,19 @@ SECTIONS
 		*(.text)
 	}
 
-	/* read only data section */
+	/* read only data */
 	.rodata BLOCK(4K) : ALIGN(4K)
 	{
 		*(.rodata)
 	}
 
-	/* data section */
+	/* data */
 	.data BLOCK(4K) : ALIGN(4K)
 	{
 		*(.data)
 	}
 
-	/* bss section */
+	/* bss */
 	.bss BLOCK(4K) : ALIGN(4K)
 	{
 		*(COMMON)
