@@ -14,15 +14,15 @@ Compile kernel.c file
 
 Linkinng compiled file
 
-```$ ld -m elf_i386 kernel.o boot.o -o FFFF.bin -nostdlib -T linker.ld```
+```$ ld -m elf_i386  boot.o kernel.o -nostdlib -T linker.ld -o FFFF.bin ```
 
 Make a ISO file including .bin file
 
 ```
-$ mkdir -p isodir/boot/grub
-$ cp FFFF.bin isodir/boot/FFFF.bin
-$ cp grub.cfg isodir/boot/grub/grub.cfg
-$ grub-mkrescue -o FFFF.iso isodir
+$ mkdir -p iso/boot/grub
+$ cp FFFF.bin iso/boot/FFFF.bin
+$ cp grub.cfg iso/boot/grub/grub.cfg
+$ grub-mkrescue -o FFFF.iso iso
 ```
 
 How to RUN. 
