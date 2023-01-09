@@ -33,3 +33,11 @@ $ grub-mkrescue -o FFFF.iso iso
 How to RUN. 
 1. You can download ISO file and use Oracle VM
 2. Use QEMU. `qemu-system-x86_64 -cdrom FFFF.iso`
+
+
+Here is screeshots.
+
+![OS list from GRUB](https://github.com/aze2201/ffff_OS_x86/blob/main/assets/screenshots/grub.png)
+
+![loaded OS screen](https://github.com/aze2201/ffff_OS_x86/blob/main/assets/screenshots/screen.png)
+
