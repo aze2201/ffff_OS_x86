@@ -1,4 +1,9 @@
 # set magic number to 0x1BADB002 to identified by bootloader 
+
+# /* a magic field: containing the magic number 0x1BADB002, to identify the header.
+# /* a flags field: We will not care about this field. We will simply set it to zero.
+# /* a checksum field: the checksum field when added to the fields ‘magic’ and ‘flags’ must give zero.
+
 .set MAGIC,    0x1BADB002
 
 .set FLAGS,    0
