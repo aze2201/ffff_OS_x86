@@ -1,6 +1,11 @@
 # ffff_OS_x86
 Custom OS for x86 PC arch. Only Prints  "Hello"
 
+
+There is a standard for loading various x86 kernels using a boot loader; called as Multiboot specification.
+GRUB will only load our kernel if it complies with the Multiboot spec.
+
+
 ## How to compuile and use
 
 
